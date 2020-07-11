@@ -1,7 +1,9 @@
-FROM python:3.2-slim
+FROM python:3.6-slim
 
 # Configure working directory i.e. The root dir that docker will run from
 WORKDIR /usr/src/app
+
+RUN pip install --upgrade pip
 
 # Copy requirements file from host machine to docker container
 COPY requirements.txt ./
