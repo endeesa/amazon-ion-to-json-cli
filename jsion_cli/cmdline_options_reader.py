@@ -13,12 +13,11 @@ parser.add_argument('-i', '--infile', dest="input_file", required=True, help='Pa
 
 parser.add_argument('-o', '--outfile', dest='output_file', required=False, help='Path to the output file. Output is sent to StdOut by default.')
 
-parser.add_argument('-p', '--pretify', dest='pretify', type=bool, default=False, help="If false, output will not be formated.")
+parser.add_argument('-p', '--pretify', dest='pretify', type=bool, default=False, required=False, help="If false, output will not be formated.")
 
-parser.add_argument('-q', '--quiet', dest='quiet_mode', action='store_true', help='Turn off debug logs')
+parser.add_argument('-q', '--quiet', dest='quiet_mode', action='store_true', required=False, help='Turn off debug logs')
 
-parser.add_argument('-r', '--reverse', dest='reverse_conversion', default=False, type=bool, action='store_true',
- help="Do the reverse conversion. i.e. Convert ION to JSON")
+parser.add_argument('-r', '--reverse', dest='reverse_conversion', action='store_true', required=False, help="Do the reverse conversion. i.e. Convert ION to JSON")
 
 
 class CommandLineOptions:
@@ -45,7 +44,7 @@ class CommandLineOptions:
     def pretify(self) -> bool:
         return self._pretify
 
-     @property
+    @property
     def quiet_mode(self) -> bool:
         return self._quiet_mode
 
@@ -57,12 +56,12 @@ class CommandLineOptions:
         """Returns the string representation of the CommandLineOptions object. i.e. str(CommandLineOptions)"""
 
         cli_args_str = 'Command Line Options\n'
-        cli_args_str += '=====\t====\t====='
+        cli_args_str += '=====\t====\t=====\n'
         cli_args_str += f'Input file \t{self._input_file}\n'
-        cli_args_str += f'Input file \t{self._output_file}\n'
-        cli_args_str += f'Input file \t{self._pretify}\n'
-        cli_args_str += f'Input file \t{self._quiet_mode}\n'
-        cli_args_str += f'Input file \t{self._reverse_conversion}\n'
+        cli_args_str += f'Output file \t{self._output_file}\n'
+        cli_args_str += f'Prettify Output \t{self._pretify}\n'
+        cli_args_str += f'Low verbosity \t{self._quiet_mode}\n'
+        cli_args_str += f'Covert from Json to Ion \t{self._reverse_conversion}\n'
         return cli_args_str.strip()
 
 
