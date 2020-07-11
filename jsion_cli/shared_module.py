@@ -1,0 +1,2 @@
+class JSIONException(Exception):
+    pass
