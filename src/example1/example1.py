@@ -1,3 +1,5 @@
+"""Reads ION data from a text file and print the equivalent JSON data"""
+
 import json
 import amazon.ion.simpleion as ion
 from pyion2json import ion_to_json
