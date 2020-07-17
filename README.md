@@ -15,8 +15,13 @@
 
 ## Getting started
 
- - The examples use docker to ensure portability
- - Each example has a dockerfile which can be executed as follows:
+
+**Running with python from the command line**
+
+* python jsion.py -i test.txt -o out.json 
+
+
+**Running with docker**:
  
  ====================================================
 
