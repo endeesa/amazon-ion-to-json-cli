@@ -11,8 +11,6 @@
 * pyion2json
 
 
->If you are using a python version > 3.3, you might run into issues with collections module import. Try this 
-
 ## Getting started
 
 
@@ -44,7 +42,7 @@ docker run --name ion_json ion_json_img
 
 ## TroubleShooting
 
-i. **cannot import name 'MutableMapping' from 'collections'**
+i. **Cannot import name 'MutableMapping' from 'collections'**
 
 
 *  [Stack overflow solution](https://stackoverflow.com/questions/59636631/aws-cli-with-python-3-9-0a1-error-from-collections-import-mutablemapping)
