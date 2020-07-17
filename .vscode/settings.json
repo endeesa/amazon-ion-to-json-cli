@@ -1,13 +1,13 @@
 {
     "python.formatting.provider": "black",
     "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/jsion_cli;${workspaceFolder}/examples/example1"
+        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/examples/example1"
     },
     "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}/jsion_cli"
+        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/examples/example1"
     },
     "terminal.integrated.env.osx": {
-        "PYTHONPATH": "${workspaceFolder}/jsion_cli"  
+        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/examples/example1"
     },
     "workbench.colorCustomizations": {
     // "panel.background": "#000",
