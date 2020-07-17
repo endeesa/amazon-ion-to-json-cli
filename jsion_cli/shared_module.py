@@ -2,6 +2,10 @@ class JSIONException(Exception):
     pass
 
 
+class JSIONConversionError(Exception):
+    pass
+
+
 def read_file(filename, mode='r'):
     with open(filename, mode) as file_object:
         contents = file_object.read()
