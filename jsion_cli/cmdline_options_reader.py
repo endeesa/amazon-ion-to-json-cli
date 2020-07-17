@@ -57,11 +57,11 @@ class CommandLineOptions:
 
         cli_args_str = 'Command Line Options\n'
         cli_args_str += '=====\t====\t=====\n'
-        cli_args_str += f'Input file \t{self._input_file}\n'
-        cli_args_str += f'Output file \t{self._output_file}\n'
+        cli_args_str += f'Input file \t\t{self._input_file}\n'
+        cli_args_str += f'Output file \t\t{self._output_file}\n'
         cli_args_str += f'Prettify Output \t{self._pretify}\n'
-        cli_args_str += f'Low verbosity \t{self._quiet_mode}\n'
-        cli_args_str += f'Covert from Json to Ion \t{self._reverse_conversion}\n'
+        cli_args_str += f'Low verbosity \t\t{self._quiet_mode}\n'
+        cli_args_str += f'Covert from Json to Ion {self._reverse_conversion}\n'
         return cli_args_str.strip()
 
 
