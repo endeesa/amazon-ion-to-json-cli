@@ -7,17 +7,6 @@ from shared_module import JSIONException, JSIONConversionError ,read_file, write
 from pyion2json import ion_to_json
 
 
-class ConverterConfiguration:
-    __slots__ = ['_cli_options']
-
-    def __init__(self, cli_options: CommandLineOptions) -> None:
-        self._cli_options = cli_options
-
-    @property
-    def cli_options(self):
-        return self._cli_options
-
-
 class JSIONConverterBase(ABC):
     def __init__(self, config: CommandLineOptions) -> None:
         self._config = config
@@ -107,11 +96,9 @@ def converter_factory(cmdline_options: CommandLineOptions) -> JSIONConverterBase
 
 
 def main():
-    print("JsIon cli converter init...")
+    print("Initialising cli converter...")
     cmdline_options = read_cmdline_options()
     print(cmdline_options)
-
-    config = ConverterConfiguration(cmdline_options)
     converter_instance = converter_factory(cmdline_options)
     converter_instance.convert()
 
