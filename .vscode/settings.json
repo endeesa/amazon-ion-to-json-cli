@@ -1,3 +1,20 @@
 {
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}/jsion_cli;${workspaceFolder}/examples/example1"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/jsion_cli"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/jsion_cli"  
+    },
+    "workbench.colorCustomizations": {
+    // "panel.background": "#000",
+    // "terminal.foreground":"#fff",
+    // "terminal.background": "#000",
+    // "terminal.selectionBackground": "#fff0f0",
+    "terminal.ansiBrightBlue":"#ff0000",
+    "terminal.ansiBlue:": "#000"
+    }
 }
