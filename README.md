@@ -1,4 +1,4 @@
-# amazon-ion-json-examples
+# Amazon Ion to Json Converter
 
 
 >  Simple Python project(s) with a collection of examples for converting ion  data to json format(and vice-versa). Recommended python version **3.6x**
