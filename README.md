@@ -1,6 +1,6 @@
 # Amazon Ion to JSON Converter (v1.0.0b) [WIP]
 
-This Python project provides tools for converting Amazon Ion data to JSON format and vice-versa, enabling seamless use of Ion-formatted data in systems that prefer JSON.
+This project provides python abstractions for converting [Amazon Ion Data Format](https://docs.aws.amazon.com/qldb/latest/developerguide/ion.html) to JSON format and vice-versa, enabling seamless use of Ion-formatted data in systems that prefer JSON.
 
 ## Dependencies:
 
