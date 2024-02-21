@@ -1,48 +1,57 @@
-# [Amazon Ion](https://amazon-ion.github.io/ion-docs/) to Json Conveter[WIP]
+# Amazon Ion to JSON Converter (v1.0.0b) [WIP]
 
+This Python project provides tools for converting Amazon Ion data to JSON format and vice-versa, enabling seamless use of Ion-formatted data in systems that prefer JSON.
 
->  Simple Python project(s) with a collection of examples for converting ion  data to json format(and vice-versa). Recommended python version **3.6x**
+## Dependencies:
 
+- awscli
+- amazon (Verify the library name and required version)
+- pyion2json (Specify required version if necessary)
 
-## Dependency List
+Install dependencies using `pip install awscli amazon pyion2json`.
 
-* awscli
-* amazon
-* pyion2json
+## Getting Started:
 
+### Command Line:
 
-## Getting started
-
-
-**Running with python from the command line**
-
-* python jsion.py -i test.txt -o out.json 
-
-
-**Running with docker**:
- 
- ====================================================
-
-
-* docker build -t \<custom-image-name\> .
 ```bash
-# example
-docker build -t ion_json_img .
-```
-* docker run --name \<custom-container_name\> \<custom-image-name\>
-```bash
-# example
-docker run --name ion_json ion_json_img
+python jsion.py -i input.ion -o output.json
 ```
 
+**Use code with caution.**
 
-* You can learn more about docker [here](https://www.docker.com/101-tutorial)
+This command converts the "input.ion" file to the "output.json" file. Available options include:
 
-<hr/>
+- `-i`: Input file path (required)
+- `-o`: Output file path (required)
+- `-f`: Output format (JSON, default; also supports YAML)
 
-## TroubleShooting
+### Docker:
 
-i. **Cannot import name 'MutableMapping' from 'collections'**
+#### Build the image:
 
+```bash
+docker build -t ionjsonimg:latest .
+```
 
-*  [Stack overflow solution](https://stackoverflow.com/questions/59636631/aws-cli-with-python-3-9-0a1-error-from-collections-import-mutablemapping)
+**Use code with caution.**
+
+#### Run the container:
+
+```bash
+docker run --name ion_json ionjsonimg:latest -v /path/to/data:/data
+```
+
+**Use code with caution.**
+
+This mounts the local `/path/to/data` directory to the container's `/data` directory, allowing you to process files within the container.
+
+## Troubleshooting:
+
+If you encounter issues, check the project's issue tracker or provide details on the error message and steps taken.
+
+## Additional Notes:
+
+- This project is licensed under the Apache 2.0 License.
+- Unit tests are implemented to ensure correctness and reliability.
+- We welcome contributions! See the `CONTRIBUTING.md` file for details.
